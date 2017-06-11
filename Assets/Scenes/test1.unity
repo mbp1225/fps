@@ -32985,9 +32985,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1853375786}
-  - component: {fileID: 1853375785}
   - component: {fileID: 1853375784}
   - component: {fileID: 1853375787}
+  - component: {fileID: 1853375785}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -33003,26 +33003,28 @@ CapsuleCollider:
   m_GameObject: {fileID: 1853375783}
   m_Material: {fileID: 13400000, guid: a934d3c6cbc16aa4d9551492488240c7, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: -0.5, z: 0}
---- !u!54 &1853375785
-Rigidbody:
+--- !u!143 &1853375785
+CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1853375783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!4 &1853375786
 Transform:
   m_ObjectHideFlags: 0
@@ -33049,10 +33051,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewCamera: {fileID: 313417962}
-  movementSpeed: 7
+  movementSpeed: 8
   turnSpeed: 4.5
-  gravity: 0.098
-  jumpHeight: 10
+  gravity: 9.8
+  jumpHeight: 5
 --- !u!1 &1865687843
 GameObject:
   m_ObjectHideFlags: 0
